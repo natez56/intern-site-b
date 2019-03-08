@@ -9,6 +9,7 @@ Nathan Zimmerman
 How to install and run with lando
 1. git clone the repo
 2. lando init inside the intern-site-b directory
+ - Set webroot as ./web
 3. lando start
 4. composer install
 5. Open site and install drupal
