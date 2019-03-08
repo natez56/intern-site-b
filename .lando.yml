@@ -1,0 +1,4 @@
+name: intern-app
+recipe: drupal8
+config:
+  webroot: ./web

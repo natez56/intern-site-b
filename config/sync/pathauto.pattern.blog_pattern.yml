@@ -1,0 +1,22 @@
+uuid: dc423db4-c8c0-4864-be21-eb40bbba7706
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: blog_pattern
+label: 'Blog Pattern'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  d8478a1b-89bf-4604-b332-709d214f31a5:
+    id: node_type
+    bundles:
+      nhl_blog: nhl_blog
+    negate: false
+    context_mapping:
+      node: node
+    uuid: d8478a1b-89bf-4604-b332-709d214f31a5
+selection_logic: and
+weight: -5
+relationships: {  }

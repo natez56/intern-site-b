@@ -1,0 +1,22 @@
+uuid: 6d86acdf-eb22-4b47-94a6-e7657c2551b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.nhl_blog
+  module:
+    - text
+id: node.nhl_blog.body
+field_name: body
+entity_type: node
+bundle: nhl_blog
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

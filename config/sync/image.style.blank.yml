@@ -1,0 +1,7 @@
+uuid: 51c3362a-d07e-4702-a91c-de1d421659e3
+langcode: en
+status: true
+dependencies: {  }
+name: blank
+label: Blank
+effects: {  }

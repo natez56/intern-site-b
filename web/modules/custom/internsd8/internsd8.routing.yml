@@ -1,0 +1,7 @@
+hello_world.content:
+  path: '/the-interns'
+  defaults:
+    _controller: '\Drupal\internsd8\Controller\Internsd8Controller::content'
+    _title: 'Internsd8'
+  requirements:
+    _permission: 'access content'

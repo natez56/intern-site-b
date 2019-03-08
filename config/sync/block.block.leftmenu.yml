@@ -1,0 +1,24 @@
+uuid: d2431432-db26-487f-b394-4a9f6b60cec8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.left-menu
+  module:
+    - system
+  theme:
+    - drupal8_zymphonies_theme
+id: leftmenu
+theme: drupal8_zymphonies_theme
+region: sidebar_first
+weight: -8
+provider: null
+plugin: 'system_menu_block:left-menu'
+settings:
+  id: 'system_menu_block:left-menu'
+  label: 'Left Menu'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

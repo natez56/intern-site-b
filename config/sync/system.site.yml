@@ -1,0 +1,14 @@
+uuid: 7a3cc0d8-b4fb-4566-89fa-7b37d7065219
+name: 'Hockey Forum'
+mail: example@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /home
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

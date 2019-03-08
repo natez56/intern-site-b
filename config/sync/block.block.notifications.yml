@@ -1,0 +1,26 @@
+uuid: 942a4a86-c897-4cc6-96b2-dae894f9883f
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_notification
+    - system
+  theme:
+    - drupal8_zymphonies_theme
+id: notifications
+theme: drupal8_zymphonies_theme
+region: sidebar_first
+weight: -7
+provider: null
+plugin: notification_block
+settings:
+  id: notification_block
+  label: Notifications
+  provider: custom_notification
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /home
+    negate: true
+    context_mapping: {  }

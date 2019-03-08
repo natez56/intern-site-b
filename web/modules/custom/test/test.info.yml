@@ -1,0 +1,5 @@
+name: aaa_test
+type: module
+description: Creates a custom block
+package: Custom
+core: 8.x

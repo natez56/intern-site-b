@@ -1,0 +1,12 @@
+services:
+  custom_notification.date_manager:
+    class: Drupal\custom_notification\Services\DateManager
+
+  custom_notification.notification:
+    class: Drupal\custom_notification\Services\NotificationManager
+    arguments:
+      [
+        "@entity_type.manager",
+        "@config.factory",
+        "@custom_notification.date_manager",
+      ]

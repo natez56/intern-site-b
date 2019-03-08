@@ -1,0 +1,285 @@
+definitions:
+  contact__site_page:
+    enabled: true
+    menu_name: footer
+    parent: ''
+    weight: 0
+    expanded: false
+  standard__front_page:
+    menu_name: main
+    parent: ''
+    weight: -50
+    expanded: true
+    enabled: true
+  comment__admin:
+    weight: -62
+    menu_name: admin
+    parent: system.admin_content
+    enabled: true
+    expanded: false
+  block__admin_display:
+    weight: -62
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__comment_type__collection:
+    weight: -61
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__contact_form__collection:
+    weight: -60
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__node_type__collection:
+    weight: -59
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  field_ui__display_mode:
+    weight: -58
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__menu__collection:
+    weight: -57
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__taxonomy_vocabulary__collection:
+    weight: -56
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  entity__view__collection:
+    weight: -55
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    enabled: true
+  system__admin:
+    weight: -63
+    menu_name: admin
+    parent: ''
+    enabled: true
+    expanded: false
+  system__admin_content:
+    weight: -99
+    menu_name: admin
+    parent: system.admin
+    enabled: true
+    expanded: false
+  system__admin_structure:
+    weight: -98
+    menu_name: admin
+    parent: system.admin
+    expanded: false
+    enabled: true
+  system__themes_page:
+    weight: -97
+    menu_name: admin
+    parent: system.admin
+    expanded: false
+    enabled: true
+  system__modules_list:
+    weight: -96
+    menu_name: admin
+    parent: system.admin
+    expanded: false
+    enabled: true
+  system__admin_config:
+    weight: -95
+    menu_name: admin
+    parent: system.admin
+    expanded: false
+    enabled: true
+  entity__user__collection:
+    weight: -93
+    menu_name: admin
+    parent: system.admin
+    expanded: false
+    enabled: true
+  system__admin_reports:
+    weight: -92
+    menu_name: admin
+    parent: system.admin
+    expanded: false
+    enabled: true
+  help__main:
+    weight: -91
+    menu_name: admin
+    parent: system.admin
+    expanded: false
+    enabled: true
+  system__performance_settings:
+    weight: -63
+    menu_name: admin
+    parent: system.admin_config_development
+    expanded: false
+    enabled: true
+  system__logging_settings:
+    weight: -62
+    menu_name: admin
+    parent: system.admin_config_development
+    expanded: false
+    enabled: true
+  system__site_maintenance_mode:
+    weight: -61
+    menu_name: admin
+    parent: system.admin_config_development
+    expanded: false
+    enabled: true
+  backup_migrate__quick_backup:
+    weight: -60
+    menu_name: admin
+    parent: system.admin_config_development
+    expanded: false
+    enabled: true
+  config__sync:
+    weight: -59
+    menu_name: admin
+    parent: system.admin_config_development
+    expanded: false
+    enabled: true
+  devel__admin_settings:
+    weight: -58
+    menu_name: admin
+    parent: system.admin_config_development
+    expanded: false
+    enabled: true
+  devel_generate__content:
+    weight: -57
+    menu_name: admin
+    parent: system.admin_config_development
+    expanded: false
+    enabled: true
+  devel_generate__menu:
+    weight: -56
+    menu_name: admin
+    parent: system.admin_config_development
+    expanded: false
+    enabled: true
+  devel_generate__term:
+    weight: -55
+    menu_name: admin
+    parent: system.admin_config_development
+    expanded: false
+    enabled: true
+  devel_generate__user:
+    weight: -53
+    menu_name: admin
+    parent: system.admin_config_development
+    expanded: false
+    enabled: true
+  devel_generate__vocabulary:
+    weight: -52
+    menu_name: admin
+    parent: system.admin_config_development
+    expanded: false
+    enabled: true
+  user__admin_index:
+    weight: 3
+    menu_name: admin
+    parent: system.admin_config
+    expanded: false
+    enabled: true
+  entity__user__field_ui_fields_:
+    weight: 1
+    menu_name: admin
+    parent: entity.user.admin_form
+    expanded: false
+    enabled: true
+  entity__entity_form_display__user__default_:
+    weight: 3
+    menu_name: admin
+    parent: entity.user.admin_form
+    expanded: false
+    enabled: true
+  system__admin_config_system:
+    weight: 4
+    menu_name: admin
+    parent: system.admin_config
+    expanded: false
+    enabled: true
+  system__admin_config_content:
+    weight: 5
+    menu_name: admin
+    parent: system.admin_config
+    expanded: false
+    enabled: true
+  system__admin_config_ui:
+    weight: 6
+    menu_name: admin
+    parent: system.admin_config
+    expanded: false
+    enabled: true
+  entity__shortcut_set__collection:
+    weight: -53
+    menu_name: admin
+    parent: system.admin_config_ui
+    expanded: false
+    enabled: true
+  system__admin_config_development:
+    weight: 7
+    menu_name: admin
+    parent: system.admin_config
+    expanded: false
+    enabled: true
+  system__admin_config_media:
+    weight: 8
+    menu_name: admin
+    parent: system.admin_config
+    expanded: false
+    enabled: true
+  system__admin_config_search:
+    weight: 9
+    menu_name: admin
+    parent: system.admin_config
+    expanded: false
+    enabled: true
+  system__admin_config_regional:
+    weight: 10
+    menu_name: admin
+    parent: system.admin_config
+    expanded: false
+    enabled: true
+  system__admin_config_services:
+    weight: 11
+    menu_name: admin
+    parent: system.admin_config
+    expanded: false
+    enabled: true
+  system__admin_config_workflow:
+    weight: 12
+    menu_name: admin
+    parent: system.admin_config
+    expanded: false
+    enabled: true
+  entity__user_role__delete_form__authenticated:
+    weight: 1
+    menu_name: admin
+    parent: entity.user_role.edit_form.authenticated
+    expanded: false
+    enabled: true
+  entity__user_role__devel_load__authenticated:
+    weight: 2
+    menu_name: admin
+    parent: entity.user_role.edit_form.authenticated
+    expanded: false
+    enabled: true
+  entity__user_role__edit_permissions_form__authenticated:
+    weight: 3
+    menu_name: admin
+    parent: entity.user_role.edit_form.authenticated
+    expanded: false
+    enabled: true
+_core:
+  default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM

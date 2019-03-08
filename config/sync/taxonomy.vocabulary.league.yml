@@ -1,0 +1,9 @@
+uuid: c00519cb-ee6e-4b20-b7c4-adeed3b5a4cd
+langcode: en
+status: true
+dependencies: {  }
+name: League
+vid: league
+description: 'Hockey League'
+hierarchy: 0
+weight: 0

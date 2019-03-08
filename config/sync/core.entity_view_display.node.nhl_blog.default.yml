@@ -1,0 +1,58 @@
+uuid: 1b2af650-2571-401e-9b0e-1ed5a6d9cafe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.nhl_blog.body
+    - field.field.node.nhl_blog.field_image
+    - field.field.node.nhl_blog.field_league
+    - field.field.node.nhl_blog.field_team
+    - image.style.blog_image
+    - node.type.nhl_blog
+  module:
+    - image
+    - text
+    - user
+id: node.nhl_blog.default
+targetEntityType: node
+bundle: nhl_blog
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 2
+    label: above
+    settings:
+      image_style: blog_image
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_league:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_team:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

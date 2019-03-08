@@ -1,0 +1,30 @@
+uuid: 9b2c5f98-ebcc-499f-8437-7ebbddf1dc91
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.most_recent_posts
+  module:
+    - system
+    - views
+  theme:
+    - drupal8_zymphonies_theme
+id: views_block__most_recent_posts_most_recent_posts
+theme: drupal8_zymphonies_theme
+region: sidebar_second
+weight: -7
+provider: null
+plugin: 'views_block:most_recent_posts-most_recent_posts'
+settings:
+  id: 'views_block:most_recent_posts-most_recent_posts'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/league/*'
+    negate: false
+    context_mapping: {  }

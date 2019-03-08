@@ -1,0 +1,9 @@
+uuid: 1e5648d3-6e08-4af8-89e8-9067364dfa66
+langcode: en
+status: true
+dependencies: {  }
+name: 'NHL Teams'
+vid: nhl_teams
+description: 'National hockey league teams'
+hierarchy: 0
+weight: 0

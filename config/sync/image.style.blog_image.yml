@@ -1,0 +1,14 @@
+uuid: e3aaa907-d565-4042-a91b-886502520e33
+langcode: en
+status: true
+dependencies: {  }
+name: blog_image
+label: 'Blog Image (200 x 200)'
+effects:
+  c5591ff8-695f-459f-9d9b-70de1766c550:
+    uuid: c5591ff8-695f-459f-9d9b-70de1766c550
+    id: image_resize
+    weight: 2
+    data:
+      width: 200
+      height: 200

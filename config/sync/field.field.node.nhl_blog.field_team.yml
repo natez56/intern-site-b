@@ -1,0 +1,31 @@
+uuid: a4000c2e-e66f-4f6f-ae71-fc8ebc1a77da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_team
+    - node.type.nhl_blog
+    - taxonomy.vocabulary.ahl_teams
+    - taxonomy.vocabulary.nhl_teams
+id: node.nhl_blog.field_team
+field_name: field_team
+entity_type: node
+bundle: nhl_blog
+label: Team
+description: 'Hockey team that the post references'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ahl_teams: ahl_teams
+      nhl_teams: nhl_teams
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ahl_teams
+field_type: entity_reference

@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * Modifies my custom view that has the id most_recent_posts to apply css to image fields.
+ * To figure out how to interact with the view_pre_render hook I enabled the module devel kinter
+ * and use the print statement dsm to print out the $view->result contents.
+ * dsm($view->result)
+ * 
+ * Custom view requirements:
+ *  1. Image style must be set to None in the Content:Image field settings of the view.
+ */
+// function internsd8_views_pre_render(&$view) {
+//     // Id of the custom view I created.
+//     $my_view_id = 'most_recent_posts';
+
+//     // Ensures this hook only applies to the custom view I created.
+//     if ($view->id() == $my_view_id) {
+
+//         $is_first_image = true; // Track which field I am modifying to ensure that first field is changed differently
+//         foreach ($view->result as $result) {
+
+//             // Array of image fields returned as part of the &$view object passed into the hook.
+//             // The object fields are protected class members so a get function is used to access them.
+//             $image_fields = $result->_entity->get('field_image')->getValue()[0];
+
+//             // Modify first image differently.
+//             if ($is_first_image) {
+//                 $image_fields['width'] = "480";
+//                 $image_fields['height'] = "480";
+
+//                 $is_first_image = false;
+//             } else {
+//                 $image_fields['width'] = "200";
+//                 $image_fields['height'] = "200";
+//             }
+
+//             // Set function used here to alter the image_fields since the fields are protected data members of the
+//             // &$view object.
+//             $result->_entity->set('field_image', array($image_fields));
+//         }
+
+//     }
+// }

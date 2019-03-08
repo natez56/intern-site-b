@@ -1,0 +1,8 @@
+uuid: 896ca840-9032-44ee-9e66-fa07ba24c94e
+langcode: en
+status: true
+dependencies: {  }
+id: left-menu
+label: 'Left Menu'
+description: 'Left Menu Configurations'
+locked: false

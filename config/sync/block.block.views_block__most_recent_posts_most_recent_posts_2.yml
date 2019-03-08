@@ -1,0 +1,30 @@
+uuid: c19c87a5-1dc8-4dcd-8f17-53c74c9d93dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.most_recent_posts
+  module:
+    - system
+    - views
+  theme:
+    - drupal8_zymphonies_theme
+id: views_block__most_recent_posts_most_recent_posts_2
+theme: drupal8_zymphonies_theme
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:most_recent_posts-most_recent_posts'
+settings:
+  id: 'views_block:most_recent_posts-most_recent_posts'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /the-interns
+    negate: false
+    context_mapping: {  }

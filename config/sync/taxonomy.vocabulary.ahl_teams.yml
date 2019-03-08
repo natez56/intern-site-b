@@ -1,0 +1,9 @@
+uuid: 467b2fa7-e699-4074-ae9e-84ba5dd76628
+langcode: en
+status: true
+dependencies: {  }
+name: 'AHL Teams'
+vid: ahl_teams
+description: 'American Hockey League Teams'
+hierarchy: 0
+weight: 0

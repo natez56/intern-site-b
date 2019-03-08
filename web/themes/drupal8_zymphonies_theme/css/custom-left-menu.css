@@ -1,0 +1,21 @@
+a.left-menu {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+a.left-menu.is-active {
+  color: #f5f5f5;
+  background-color: #078d92;
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+a.left-menu:hover {
+  color: #b39e00;
+  text-shadow: 0px 0px 30px #fdec6e;
+  transition: all 0.25s ease-in;
+}
+
+.nobull {
+  list-style-type: none;
+}

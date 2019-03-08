@@ -1,0 +1,29 @@
+uuid: 01afc4ae-d616-46fe-9643-5c40ebbd4a2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_league
+    - node.type.nhl_blog
+    - taxonomy.vocabulary.league
+id: node.nhl_blog.field_league
+field_name: field_league
+entity_type: node
+bundle: nhl_blog
+label: League
+description: 'Hockey league that the post references.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      league: league
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

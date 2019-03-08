@@ -1,0 +1,38 @@
+uuid: c9243b3d-47ca-4c89-9792-271685f420c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.nhl_blog.body
+    - field.field.node.nhl_blog.field_image
+    - field.field.node.nhl_blog.field_league
+    - field.field.node.nhl_blog.field_team
+    - node.type.nhl_blog
+  module:
+    - user
+id: node.nhl_blog.teaser
+targetEntityType: node
+bundle: nhl_blog
+mode: teaser
+content:
+  field_league:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_team:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_image: true
+  links: true

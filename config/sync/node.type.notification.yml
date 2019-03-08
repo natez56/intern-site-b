@@ -1,0 +1,18 @@
+uuid: 457486b2-1018-4fa9-b334-ce678843282d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Notification
+type: notification
+description: 'Displays a notification message when a given page is viewed.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

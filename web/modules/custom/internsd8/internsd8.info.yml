@@ -1,0 +1,5 @@
+name: internsd8
+type: module
+description: Creates a custom block
+package: Custom
+core: 8.x
