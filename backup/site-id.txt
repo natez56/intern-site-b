@@ -1,2 +1,2 @@
 
-drush config-set "system.site" uuid "7a3cc0d8-b4fb-4566-89fa-7b37d7065219"
+lando drush config-set "system.site" uuid "7a3cc0d8-b4fb-4566-89fa-7b37d7065219"
