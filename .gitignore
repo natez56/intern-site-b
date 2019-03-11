@@ -25,3 +25,4 @@
 
 .lando.yml
 /web/currentsession.txt
+/web/sites/default/local.setting.php
