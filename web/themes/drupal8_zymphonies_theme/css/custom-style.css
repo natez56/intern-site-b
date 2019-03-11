@@ -700,7 +700,7 @@ table tfoot .links a{
 }
 
 /* Main nav custom css */
-.navbar-default .navbar-nav>li>a {
+/* .navbar-default .navbar-nav>li>a {
   color: white;
 }
 
@@ -736,4 +736,4 @@ li.dropdown.open .dropdown-menu {
 .nav--container {
   min-width: 1024px;
   margin-right: 20%;
-}
+} */
