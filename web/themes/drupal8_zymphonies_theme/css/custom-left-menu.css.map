@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACT,aAAa,EAAE,IAAI;EACnB,YAAY,EAAE,IAAI;CAanB;;AAfD,AAGE,UAHQ,AAGP,MAAM,CAAC;EACN,KAAK,EAAE,OAAO;EACd,WAAW,EAAE,oBAAoB;EACjC,kBAAkB,EAAE,iBAAiB;EACrC,UAAU,EAAE,iBAAiB;CAC9B;;AARH,AASE,UATQ,AASP,UAAU,CAAC;EACV,KAAK,EAAE,OAAO;EACd,gBAAgB,EAAE,OAAO;EACzB,aAAa,EAAE,IAAI;EACnB,cAAc,EAAE,IAAI;CACrB;;AAGH,AAAA,OAAO,CAAC;EACN,eAAe,EAAE,IAAI;CACtB",
+    "sources": [
+        "../scss/custom-left-menu.scss"
+    ],
+    "names": [],
+    "file": "custom-left-menu.css"
+}
