@@ -29,3 +29,11 @@ custom_notification.unpublish:
     _title: 'Unpublish Node'
   requirements:
     _permission: 'administer site configuration'
+
+custom_notification.hide:
+  path: '/hide-notification/{node}'
+  defaults:
+    _controller: '\Drupal\custom_notification\Controller\HideNodeController::content'
+    _title: 'Hide Node'
+  requirements:
+    _access: 'TRUE'

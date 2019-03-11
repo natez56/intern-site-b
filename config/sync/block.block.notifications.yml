@@ -21,6 +21,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /home
+    pages: "/home\r\n/notifications\r\n/user/login"
     negate: true
     context_mapping: {  }

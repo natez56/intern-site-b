@@ -74,42 +74,47 @@
   ]
 %}
 {{ attach_library('classy/node') }}
-<article{{ attributes.addClass(classes) }}>
-  
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-    {% if node.bundle == 'notification' %}
-      <a href="#!" class="down" onClick='expand({{ node.id }});'><i class="fas fa-angle-double-down"></i></a>
-      <a href="#!" class="up" onClick='shrink({{ node.id }});'><i class="fas fa-angle-double-up"></i></a>
+<article{{attributes.addClass(classes)}}>
+    {{ title_prefix }}
+    {% if not page %}
+        <h2{{title_attributes}}>
+            <a href="{{ url }}" rel="bookmark">
+                {{ label }}</a>
+        </h2>
+        {% if node.bundle == 'notification' %}
+            <a class="down" href="#!" onClick='expand({{ node.id }});'>
+                <i class="fas fa-angle-double-down"></i>
+            </a>
+            <a class="up" href="#!" onClick='shrink({{ node.id }});'>
+                <i class="fas fa-angle-double-up"></i>
+            </a>
+        {% endif %}
     {% endif %}
-  {% endif %}
-  {{ title_suffix }}
-
-  {% if display_submitted %}
-    <footer class="comment-submitted">
-      <div{{ author_attributes.addClass('node__submitted') }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-
-  {% if node.bundle != 'notification' %}
-  <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
-  </div>
-  {% endif %}
-
-  {% if node.bundle == 'notification' %}
-    <div{{ content_attributes.addClass('node__content') }} style="display:none;">
-      {{ content }}
-    </div>
-  {% endif %}
-
-  {% if node.bundle == 'notification' %}
-    <a href="#!" class="close" onClick='closeNotification({{ node.id }});'><i class="fas fa-times"></i></a>
-  {% endif %}
+    {{ title_suffix }}
+    {% if display_submitted %}
+        <footer class="comment-submitted">
+            <div{{author_attributes.addClass('node__submitted')}}>
+                {% trans %}Submitted by
+                {{ author_name }}
+                on
+                {{ date }}{% endtrans %}
+                {{ metadata }}
+            </div>
+        </footer>
+    {% endif %}
+    {% if node.bundle != 'notification' %}
+        <div{{content_attributes.addClass('node__content')}}>
+            {{ content }}
+        </div>
+    {% endif %}
+    {% if node.bundle == 'notification' %}
+        <div{{content_attributes.addClass('node__content')}} style="display:none;">
+            {{ content }}
+        </div>
+    {% endif %}
+    {% if node.bundle == 'notification' %}
+        <a class="notification--close" href="#!" onClick='closeNotification({{ node.id }});'>
+            <i class="fas fa-times"></i>
+        </a>
+    {% endif %}
 </article>
