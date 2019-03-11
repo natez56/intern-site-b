@@ -1,0 +1,42 @@
+landoproxyhyperion5000gandalfedition_proxy_1 is up-to-date
+Creating network "internsiteb_default" with the default driver
+Creating volume "internsiteb_data" with default driver
+Creating volume "internsiteb_appserver" with default driver
+Creating volume "internsiteb_data_database" with default driver
+Creating internsiteb_appserver_1 ... 
+[1A[2KCreating internsiteb_appserver_1 ... [32mdone[0m[1B  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   600    0   600    0     0   1458      0 --:--:-- --:--:-- --:--:--  1459
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  303k  100  303k    0     0   291k      0  0:00:01  0:00:01 --:--:--  505k
+Drush Launcher Version: 0.6.0
+Killing internsiteb_appserver_1 ... 
+[1A[2KKilling internsiteb_appserver_1 ... [32mdone[0m[1BStarting internsiteb_appserver_1 ... 
+[1A[2KStarting internsiteb_appserver_1 ... [32mdone[0m[1B  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0  713k    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100  713k  100  713k    0     0   503k      0  0:00:01  0:00:01 --:--:--  504k
+Killing internsiteb_appserver_1 ... 
+[1A[2KKilling internsiteb_appserver_1 ... [32mdone[0m[1BStarting internsiteb_appserver_1 ... 
+Creating internsiteb_database_1  ... 
+[1A[2KCreating internsiteb_database_1  ... [32mdone[0m[1B[2A[2KStarting internsiteb_appserver_1 ... [32mdone[0m[2BWaiting until database service is ready...
+Waiting until appserver service is ready...
+Waiting until database service is ready...
+Waiting until database service is ready...
+Waiting until database service is ready...
+Waiting until database service is ready...
+Waiting until database service is ready...
+Waiting until database service is ready...
+Waiting until database service is ready...
+
+BOOMSHAKALAKA!!!
+
+Your app has started up correctly.
+Here are some vitals:
+
+ NAME            internsiteb                         
+ LOCATION        /Users/avoy/drupalfun/intern-site-b 
+ SERVICES        appserver, database                 
+ APPSERVER URLS  https://localhost:32779             
+                 http://localhost:32780              
+                 http://internsiteb.lndo.site:8000   
+                 https://internsiteb.lndo.site       
+
