@@ -37,9 +37,9 @@ function shrink(node_value) {
 }
 
 function closeNotification(node_value) {
-	//alert(node_value);
 	jQuery('article[data-history-node-id=' + node_value + ']').css({ "display": "none" });
 
-	var endpoint = 'http://internsiteb.lndo.site:8000/hide-notification/' + node_value;
+	var endpoint = '/hide-notification/' + node_value;
+
 	Drupal.ajax({ url: endpoint }).execute();
 }

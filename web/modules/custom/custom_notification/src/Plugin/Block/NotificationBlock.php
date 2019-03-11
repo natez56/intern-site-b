@@ -5,7 +5,9 @@ namespace Drupal\custom_notification\Plugin\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\custom_notification\Services\NotificationManagerInterface;
+use Drupal\user\UserDataInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -23,10 +25,14 @@ class NotificationBlock extends BlockBase implements ContainerFactoryPluginInter
      * @var $config \Drupal\Core\Config\ConfigFactory
      * @var $notificationManager \Drupal\custom_notification\Services
      * @var $entityTypeManager \Drupal\Core\Entity\EntityTypeManager
+     * @var $userData \Drupal\user\UserDataInterface
+     * @var $accountProxy Drupal\Core\Session\AccountProxyInterface
      */
     protected $config;
     protected $notificationManager;
     protected $entityTypeManager;
+    protected $userData;
+    protected $accountProxy;
 
     /** @var string Config settings */
     const SETTINGS = 'custom_notification.settings.yml';
@@ -46,7 +52,9 @@ class NotificationBlock extends BlockBase implements ContainerFactoryPluginInter
             $plugin_id,
             $plugin_definition,
             $container->get('custom_notification.notification'),
-            $container->get('entity_type.manager')
+            $container->get('entity_type.manager'),
+            $container->get('user.data'),
+            $container->get('current_user')
         );
     }
 
@@ -59,10 +67,13 @@ class NotificationBlock extends BlockBase implements ContainerFactoryPluginInter
      */
     public function __construct(array $configuration, $plugin_id,
         $plugin_definition, NotificationManagerInterface $notificationManager,
-        EntityTypeManagerInterface $entityTypeManager) {
+        EntityTypeManagerInterface $entityTypeManager, UserDataInterface $userData,
+        AccountProxyInterface $accountProxy) {
         parent::__construct($configuration, $plugin_id, $plugin_definition);
         $this->notificationManager = $notificationManager;
         $this->entityTypeManager = $entityTypeManager;
+        $this->userData = $userData;
+        $this->accountProxy = $accountProxy;
     }
 
     /**
@@ -88,28 +99,33 @@ class NotificationBlock extends BlockBase implements ContainerFactoryPluginInter
             $blockContentArray = $this->notificationManager
                 ->getRecentThreeNotifications($startDate, $endDate);
 
-            if (empty($blockContentArray)) {
-                return [
-                    '#type' => 'markup',
-                    '#markup' => $this->t('No notifications at this time.'),
-                ];
-            }
-
             // Reverse array since block shows index 0 at top.
             $blockContentArray = array_reverse($blockContentArray);
 
-            // Check for hidden notifications
-            $userData = \Drupal::service('user.data');
-            $currentUser = \Drupal::currentUser()->id();
-            $preference = 'hidden_notifications';
-            $hiddenNotifications = $userData->get('custom_notification', $currentUser, $preference);
-            $hiddenNotifications = explode("|", $hiddenNotifications);
+            // Check for hidden notifications.
+            $currentUser = $this->accountProxy->id();
+
+            // User data key.
+            $dataKey = 'hidden_notifications';
+
+            $hiddenNotificationIds = $this->userData->get('custom_notification', $currentUser, $dataKey);
+            $hiddenNotificationIds = explode("|", $hiddenNotificationIds);
 
             $visibleNotifications = [];
+
+            // Check for hidden notifications to ensure they are not added to
+            // the final array to be displayed.
             foreach ($blockContentArray as $notification) {
-                if (!in_array($notification->get('nid')->value, $hiddenNotifications)) {
+                if (!in_array($notification->get('nid')->value, $hiddenNotificationIds)) {
                     array_push($visibleNotifications, $notification);
                 }
+            }
+
+            if (empty($visibleNotifications)) {
+                return [
+                    '#type' => 'markup',
+                    '#markup' => $this->t('No new notifications at this time.'),
+                ];
             }
 
             $view_builder = $this->entityTypeManager
