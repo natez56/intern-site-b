@@ -98,11 +98,25 @@ class NotificationBlock extends BlockBase implements ContainerFactoryPluginInter
             // Reverse array since block shows index 0 at top.
             $blockContentArray = array_reverse($blockContentArray);
 
+            // Check for hidden notifications
+            $userData = \Drupal::service('user.data');
+            $currentUser = \Drupal::currentUser()->id();
+            $preference = 'hidden_notifications';
+            $hiddenNotifications = $userData->get('custom_notification', $currentUser, $preference);
+            $hiddenNotifications = explode("|", $hiddenNotifications);
+
+            $visibleNotifications = [];
+            foreach ($blockContentArray as $notification) {
+                if (!in_array($notification->get('nid')->value, $hiddenNotifications)) {
+                    array_push($visibleNotifications, $notification);
+                }
+            }
+
             $view_builder = $this->entityTypeManager
                 ->getViewBuilder($entityType);
 
             $build = $view_builder
-                ->viewMultiple($blockContentArray, $viewMode);
+                ->viewMultiple($visibleNotifications, $viewMode);
 
             return $build;
         } else {
