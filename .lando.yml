@@ -1,4 +1,4 @@
-name: intern-app
+name: intern-site-b
 recipe: drupal8
 config:
   webroot: ./web
