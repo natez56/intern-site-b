@@ -4,9 +4,9 @@
   .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     color: lightgrey; }
 
-.dropdown .open {
+.dropdown.open {
   position: static; }
-  .dropdown .open .dropdown-menu {
+  .dropdown.open .dropdown-menu {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
