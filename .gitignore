@@ -25,3 +25,4 @@
 
 .lando.yml
 /web/currentsession.txt
+node_modules
