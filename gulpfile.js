@@ -8,12 +8,10 @@ browserSync.init({
 });
 
 gulp.task('sass', function () {
-    gulp.watch('web/themes/drupal8_zymphonies_theme/sass/*.scss', function () {
-        return gulp.src("web/themes/drupal8_zymphonies_theme/sass/**/*.scss")
-            .pipe(sass())
-            .pipe(gulp.dest('web/themes/drupal8_zymphonies_theme/css'))
-            .pipe(browserSync.stream());
-    });
+    return gulp.src("web/themes/drupal8_zymphonies_theme/sass/*.scss")
+        .pipe(sass())
+        .pipe(gulp.dest('web/themes/drupal8_zymphonies_theme/css'))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('watch', function () {
