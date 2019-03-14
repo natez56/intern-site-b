@@ -105,6 +105,10 @@ class NotificationBlock extends BlockBase implements ContainerFactoryPluginInter
             // Check for hidden notifications.
             $currentUser = $this->accountProxy->id();
 
+            if ($currentUser == 0) {
+                return null;
+            }
+
             // User data key.
             $dataKey = 'hidden_notifications';
 
