@@ -97,7 +97,7 @@
             <a href="{{ url }}" rel="bookmark">
                 {{ label }}</a>
         </h2>
-        <div>
+        <div{{content_attributes.addClass('node__content')}}>
             {{ content }}
         </div>
     {% endif %}
@@ -113,7 +113,7 @@
             </div>
         </footer>
     {% endif %}
-    {% if node.bundle != 'notification' %}
+    {% if node.bundle != 'notification' and not page %}
         <div{{content_attributes.addClass('node__content')}}>
             {{ content }}
         </div>
