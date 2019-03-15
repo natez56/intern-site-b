@@ -74,6 +74,9 @@
   ]
 %}
 {{ attach_library('classy/node') }}
+{% if node.bundle == 'notification' %}
+    {% set classes = classes|merge(['notification']) %}
+{% endif %}
 <article{{attributes.addClass(classes)}}>
     {{ title_prefix }}
     {% if not page %}
@@ -82,13 +85,21 @@
                 {{ label }}</a>
         </h2>
         {% if node.bundle == 'notification' %}
-            <a class="down" href="#!" onClick='expand({{ node.id }});'>
+            <a class="down" href="#" onClick='expand({{ node.id }});'>
                 <i class="fas fa-angle-double-down"></i>
             </a>
-            <a class="up" href="#!" onClick='shrink({{ node.id }});'>
+            <a class="up" href="#" onClick='shrink({{ node.id }});'>
                 <i class="fas fa-angle-double-up"></i>
             </a>
         {% endif %}
+        {% else %}
+        <h2{{title_attributes}}>
+            <a href="{{ url }}" rel="bookmark">
+                {{ label }}</a>
+        </h2>
+        <div>
+            {{ content }}
+        </div>
     {% endif %}
     {{ title_suffix }}
     {% if display_submitted %}
@@ -113,7 +124,7 @@
         </div>
     {% endif %}
     {% if node.bundle == 'notification' %}
-        <a class="notification--close" href="#!" onClick='closeNotification({{ node.id }});'>
+        <a class="notification--close" href="#" onClick='closeNotification({{ node.id }});'>
             <i class="fas fa-times"></i>
         </a>
     {% endif %}

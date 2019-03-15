@@ -635,9 +635,19 @@ ul.links.inline li {
 
 article {
   padding: 10px;
+
+  /* box-shadow: 1px 0px 0px black; */
+  border-bottom: 1px solid #848484;
+  background-color: #f5f5f5;
+  margin-bottom: 10px;
+}
+
+.notification {
+  padding: 10px;
   box-shadow: 2px 2px 2px black;
   border: 1px solid #848484;
   margin-bottom: 10px;
+  background-color: #fff;
 }
 
 span.quickedit-field {
